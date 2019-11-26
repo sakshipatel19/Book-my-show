@@ -1,0 +1,27 @@
+.search-input {
+    width: 90%;
+    height: 33px;
+    border-radius: 4px;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-left: 37px;
+    font-size: 14px;
+    color: #999;
+}
+.errspan {
+    float: right;
+    margin-right: 6px;
+    margin-top: -20px;
+    position: relative;
+    z-index: 2;
+    color:#999;
+    font-size: 13px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    margin-top: 13px;
+}

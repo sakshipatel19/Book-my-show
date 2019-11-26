@@ -1,0 +1,71 @@
+.cinema-list-conatiner{
+    background: #f2f2f2;
+    padding: 10px;
+}
+.cinema-list{
+    margin: 0 auto;
+    width: 90%;
+    padding: 10px;
+    background: #fff;
+}
+.cinema-list-item{
+    zoom: 1;
+    background: #fff;
+    border-bottom: 1px solid #eff1f3;
+    padding: 13px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.cinema-name{
+    display: inline-block;
+    width: 30%;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.show-time{
+    border: 1px solid #999;
+    color: #4abd5d;
+    border-radius: 4px;
+    padding: 5px 13px;
+    font-size: 12px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.heartcl{
+    margin: 0px 15px 0px 0px;
+    font-size: 15px;
+}
+
+.cinema-movie-detail{
+    background: #333545;
+    padding: 10px;
+}
+
+.movie-genre-cl{
+    border: 1px solid #999;
+    color: #999 !important;
+    border-radius: 16px;
+    padding: 5px;
+    text-transform: capitalize;
+    text-align: center;
+}
+.movie-title-cl{
+    color: #fff;
+    font-size: 40px;
+    padding: 0px 10px;
+}
+
+.movie-desc-ul li{
+    margin-right: 10px;
+    color:#fff;
+    font-size: 13px;
+}

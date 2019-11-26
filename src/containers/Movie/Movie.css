@@ -1,0 +1,117 @@
+.book-tickets{
+    background: #0078ff;
+    color: #fff;
+    max-width: 238px;
+    margin: 0 auto;
+    min-width: 238px;
+    cursor: pointer;
+    padding: 15px 10px;
+    border-radius: 2px;
+    float: right;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.book-tickets:hover{
+    background: #0060cc;
+}
+
+.event-cover {
+    height: 150px;
+    background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) ),url(//in.bmscdn.com/iedb/movies/images/mobile/thumbnail/large/frozen-2-et00056551-26-04-2017-07-17-17.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-left: 290px;
+    color: #ccc;
+    padding-top: 80px;
+    font-family: sans-serif;
+}
+
+.event-actions {
+    height: 75px;
+    background: #f9f9f9;
+    padding-left: 290px;
+    padding-top: 10px;
+}
+
+.event-preview {
+    height: 270px;
+    width: 260px;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.event-title {
+    font-size: 26px;
+    font-family: sans-serif;
+}
+
+.cmn {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.event-type {
+    margin: 18px 0;
+}
+
+.types {
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.time-zone {
+    color: #fff;
+}
+
+.date {
+    margin-right: 10px;
+}
+
+.actions {
+    display: inline-block;
+    margin-right: 5em;
+}
+
+.book-ticket-btn {
+    float: right;
+    background: #0078ff;
+    margin: 15px;
+    padding: 15px 70px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.action-label {
+    font-size: 11px;
+    color: #999;
+    letter-spacing: .5px;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+
+.votes-per {
+    font-size: 26px;
+    color: #333;
+}
+
+.cri-rating {
+    font-size: 18px;
+}
+
+.user-rating {
+    font-size: 26px;
+    color: #333;
+}

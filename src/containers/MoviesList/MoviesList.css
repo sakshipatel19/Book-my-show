@@ -1,0 +1,40 @@
+.movies-card{
+    display:inline-block;
+    background: #fff;
+    width: 22%;
+    margin: 20px 10px;
+    height: 340px;
+    border-radius: 5px;
+}
+
+.heart-cls {
+    color: #d6181f;
+}
+
+.movie-caption {
+    padding: 5px 20px;
+}
+
+.movie-title {
+    color: #333;
+    margin-left: 10px;
+}
+
+.movie-img-container {
+    /* width: 24%; */
+    height: 300px
+}
+
+.movie-img {
+    width: 100%;
+    height: calc(100% - 20px);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.movie-genre{
+    font-size: 12px;
+    color: #999;
+    line-height: normal;
+    text-transform: capitalize;
+    text-align: center;
+}
