@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 
 import {reciveBookingDetail} from '../../actions';
 import './SeatSelect.css';
-import { select } from 'redux-saga/effects';
-
 class SelectSeact extends Component {
     state ={
         isSelected : false,
@@ -22,8 +20,6 @@ class SelectSeact extends Component {
         this.setState({
             isSelected: !this.state.isSelected,
         })
-        const { movieDetail } =this.props;
-        const seats = {...movieDetail, seats:[row,col]}
     }
     createSeats = () =>{
         const {seats} = this.props;

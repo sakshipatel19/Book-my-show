@@ -39,19 +39,20 @@ class CinemaList extends Component {
                     <div>
                         <ul>
                             { 
-                            ticketObj.movie = movie.EventTitle,
-                            ticketObj.cinema = cinemas[i].VenueName,
+                       
                             showTime[i].map(time =>
                                 {
-                                    ticketObj.time = time
+                                    ticketObj.movie = movie.EventTitle;
+                                    ticketObj.cinema = cinemas[i].VenueName;
+                                    ticketObj.time = time;
                                     return <Link to="/seats">
                                         <li className="show-time" onClick={()=>this.showSeats(ticketObj)}>{time}</li>
                                     </Link>
                                 }) 
                             }
                         </ul>
+                    </div>
                 </div>
-            </div>
             cinemaList.push(cinema);
         }
         return(

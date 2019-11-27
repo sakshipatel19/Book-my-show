@@ -66,7 +66,7 @@ class Movie extends Component {
                     <Link to='/cinemalist'><div className="book-ticket-btn" onClick={()=>this.props.reciveCinemaMovieData}>Book Ticktes</div></Link>
                 </div>
                 <div className="event-preview">
-                    <img style={{ height: '310px',width: '230px',position: 'absolute',top: '70px',left: '10px'}} src={imgUrl}/>
+                    <img style={{ height: '310px',width: '230px',position: 'absolute',top: '70px',left: '10px'}} alt={urlCode} src={imgUrl}/>
                 </div>
             </div>
         );
@@ -88,5 +88,5 @@ function mapDispatchToProps(dispatch){
     return bindActionCreators({reciveCinemaMovieData:reciveCinemaMovieData},dispatch);
 }
 
-export default connect(mapStateToProps,null)(Movie);
+export default connect(mapStateToProps,mapDispatchToProps)(Movie);
  

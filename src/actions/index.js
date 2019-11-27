@@ -1,4 +1,3 @@
-import axios from 'axios';
 
 // MovieList ActionTypes
 export const REQUESTMOVIELIST = 'REQUEST_FETCH_MOVIELIST_DATA';
