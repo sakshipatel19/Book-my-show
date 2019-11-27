@@ -8,22 +8,21 @@ import './SeatSelect.css';
 import { select } from 'redux-saga/effects';
 
 class SelectSeact extends Component {
-    state ={
-        isSelected : false,
-        color : 'white'
+
+    state = {
+        selectedSeats: []
     }
+    
     handleConfirmBooking =() =>{
         const { movieDetail } =this.props;
-        console.log(movieDetail);
-        
-        this.props.reciveBookingDetail(movieDetail);
+        this.props.reciveBookingDetail({movieDetail, seats: this.state.selectedSeats});
     }
-    handleSeatSelect = (row,col) =>{
+    handleSeatSelect = (event, seatNum) =>{
+        event.currentTarget.style.backgroundColor = event.currentTarget.style.backgroundColor === 'green' ? 'white' : 'green';
+        event.currentTarget.style.color = event.currentTarget.style.backgroundColor === 'green' ? '#fff' : '#aaa';
         this.setState({
-            isSelected: !this.state.isSelected,
+            selectedSeats: [...this.state.selectedSeats, seatNum]
         })
-        const { movieDetail } =this.props;
-        const seats = {...movieDetail, seats:[row,col]}
     }
     createSeats = () =>{
         const {seats} = this.props;
@@ -33,7 +32,7 @@ class SelectSeact extends Component {
                     seats[seat].map((row,i) =>{
                         return (
                             <div className="seat-row">
-                                {row.map((col,j) =><div style={{backgroundColor: this.state.isSelected ? "green" : this.state.color}}className="seat-column" onClick={()=>this.handleSeatSelect(i,j)}></div>)}
+                                {row.map((col,j) =><div className="seat-column" key={j} onClick={(e)=>this.handleSeatSelect(e,col)}>{col}</div>)}
                             </div>
                         )
                     })

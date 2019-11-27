@@ -29,7 +29,7 @@ class Movie extends Component {
                 <div className="event-actions">
                     <div className="actions">
                         <div>
-                            <span><i className="fa fa-heart-o"></i></span>
+                            <span><i className="fa fa-heart votes"></i></span>
                             <span className="votes-per">{`${movie.ratings.avgRating}%`}</span>
                         </div>
                         <div className="action-label">
@@ -67,6 +67,17 @@ class Movie extends Component {
                 </div>
                 <div className="event-preview">
                     <img style={{ height: '310px',width: '230px',position: 'absolute',top: '70px',left: '10px'}} src={imgUrl}/>
+                </div>
+                <div className="summary">
+                    <ul className="summary-tab-container">
+                        <li className="summary-tabs active-tab">Summary</li>
+                        <li className="summary-tabs">User Reviews (835)</li>
+                        <li className="summary-tabs">Critic Reviews (4)</li>
+                    </ul>
+                    <h3 className="synopsis">Synopsis</h3>
+                    <p className="para">
+                        Three years after the events of Frozen, Elsa begins to hear strange voices calling to her from the forest and all of a sudden Arendelle finds itself in danger. Elsa, Anna, Kristoff, Olaf and Sven must go beyond Arendelle to find the origin of Elsa`s powers and save their kingdom.
+                    </p>
                 </div>
             </div>
         );
