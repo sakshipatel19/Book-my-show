@@ -7,7 +7,11 @@ import { reciveTicketDetail } from '../../actions';
 import './CinemaList.css';
 class CinemaList extends Component {
     
-    showSeats = ticketObj =>{
+    showSeats = (venue, time) =>{
+        const ticketObj ={};
+        ticketObj.movie = this.props.movie.EventTitle;
+        ticketObj.cinema = venue;
+        ticketObj.time = time;
         this.props.reciveTicketDetail(ticketObj);
     }
     //Creating Movie Description
@@ -31,22 +35,18 @@ class CinemaList extends Component {
     // Creating List of Cinema Halls
     createCinemasList = () =>{
         const { cinemas, showTime, movie } = this.props;
-        const ticketObj ={};
+      
         const cinemaList = [];
         for(let i=0;i<10;i++){
             let cinema = <div className="cinema-list-item">{}
                 <div className="cinema-name"><span><i class="fa fa-heart-o heartcl" aria-hidden="true"></i></span>{cinemas[i].VenueName}</div>
                     <div>
                         <ul>
-                            { 
-                       
+                            {           
                             showTime[i].map(time =>
-                                {
-                                    ticketObj.movie = movie.EventTitle;
-                                    ticketObj.cinema = cinemas[i].VenueName;
-                                    ticketObj.time = time;
+                                {      
                                     return <Link to="/seats">
-                                        <li className="show-time" onClick={()=>this.showSeats(ticketObj)}>{time}</li>
+                                        <li className="show-time" onClick={()=>this.showSeats(cinemas[i].VenueName, time)}>{time}</li>
                                     </Link>
                                 }) 
                             }
