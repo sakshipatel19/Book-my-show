@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux'; 
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import { reciveMovieData } from '../../actions';
 import './MoviesList.css';
 class MoviesList extends Component {
     createMoviesList = () =>{
+        console.log(this.props);
+        
         return this.props.moviesList.map(movie =>{
             let urlCode = movie.ChildEvents[0].EventImageCode;
             let imgUrl = `https://in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/${urlCode}.jpg`;
             return (
-                <Link to='/movie'>
+                <Link to={'/movie/' + movie.EventCode}>
                     <div className="movies-card" onClick={()=>this.props.reciveMovieData(movie)}>
                         <div className="movie-img-container">
                             <img className="movie-img" src={imgUrl}/>
@@ -51,5 +54,5 @@ function mapDispatchToProps(dispatch){
 }
   
   
-export default connect(mapStateToProps,mapDispatchToProps)(MoviesList);
+export default connect(mapStateToProps,mapDispatchToProps)(withRouter(MoviesList));
  

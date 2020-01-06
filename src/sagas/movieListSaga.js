@@ -7,7 +7,7 @@ import { fetchMovieList } from '../api';
 function* getMovieList(action) {
     try {
         //do API call
-        const res = yield call(fetchMovieList);
+        const res = yield call(fetchMovieList);        
         yield put(reciveMovieList(res));
     } catch (error) {
         console.log(error);

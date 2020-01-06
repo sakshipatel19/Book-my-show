@@ -11,7 +11,7 @@ class SelectSeact extends Component {
         selectedSeats: []
     }
     
-    handleConfirmBooking =() =>{
+    handleConfirmBooking = () =>{
         const { movieDetail } =this.props;
         this.props.reciveBookingDetail({movieDetail, seats: this.state.selectedSeats});
     }

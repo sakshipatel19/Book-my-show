@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
 import './BookingConfirm.css';
-<<<<<<< HEAD
-=======
-
->>>>>>> f110868bf3e6b9ef0607fb90b2a0273afed66b9b
 class BookingConfirm extends Component {
     render() { 
         console.log(this.props.booking);

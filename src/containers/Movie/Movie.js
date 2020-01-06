@@ -9,6 +9,8 @@ import './Movie.css';
 class Movie extends Component {
 
     createMovieComponent = () =>{
+        console.log(this.props);
+        
         const { movie } = this.props;
         let urlCode = movie.ChildEvents ? movie.ChildEvents[0].EventImageCode : localStorage.getItem('movieImg');
         localStorage.setItem('movieImg', urlCode);

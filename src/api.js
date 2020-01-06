@@ -1,8 +1,10 @@
+import axios from 'axios';
+const API_KEY ='AIzaSyBxh1zcTFAYzxEHCAHrm7Wtod5MbGVI9x4'
 export const fetchMovieList = async () =>{
-    const response = await fetch('https://www.omdbapi.com/?apikey=9c22ae49&s=avenger');
-    const data = await response.json();
-    console.log(data);
-    return data;
+    const response = await axios.get('http://burger-app-99f67.firebaseio.com/');
+    //const data = await response.json();
+    console.log(response);
+    return response;
 }
 
 export const fetchBookMyShowData= async () =>{
